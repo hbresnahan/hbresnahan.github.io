@@ -1,195 +1,201 @@
-<a href="javascript:elements();">Learn Elements</a>
-<script>
-function elements() {
-var list = [
-  "Hydrogen",
-  "Helium",
-  "Lithium",
-  "Beryllium",
-  "Boron",
-  "Carbon",
-  "Nitrogen",
-  "Oxygen",
-  "Fluorine",
-  "Neon",
-  "Sodium",
-  "Magnesium",
-  "Aluminium",
-  "Silicon",
-  "Phosphorus",
-  "Sulphur",
-  "Chlorine",
-  "Argon",
-  "Potassium",
-  "Calcium",
-  "Scandium",
-  "Titanium",
-  "Vanadium",
-  "Chromium",
-  "Manganese",
-  "Iron",
-  "Cobalt",
-  "Nickel",
-  "Copper",
-  "Zinc",
-  "Gallium",
-  "Germanium",
-  "Arsenic",
-  "Selenium",
-  "Bromine",
-  "Krypton",
-  "Rubidium",
-  "Strontium",
-  "Yttrium",
-  "Zirconium",
-  "Niobium",
-  "Molybdenum",
-  "Technetium",
-  "Ruthenium",
-  "Rhodium",
-  "Palladium",
-  "Silver",
-  "Cadmium",
-  "Indium",
-  "Tin",
-  "Antimony",
-  "Tellurium",
-  "Iodine",
-  "Xenon",
-  "Cesium",
-  "Barium",
-  "Lanthanum",
-  "Cerium",
-  "Praseodymium",
-  "Neodymium",
-  "Promethium",
-  "Samarium",
-  "Europium",
-  "Gadolinium",
-  "Terbium",
-  "Dysprosium",
-  "Holmium",
-  "Erbium",
-  "Thulium",
-  "Ytterbium",
-  "Lutetium",
-  "Hafnium",
-  "Tantalum",
-  "Tungsten",
-  "Rhenium",
-  "Osmium",
-  "Iridium",
-  "Platinum",
-  "Gold",
-  "Mercury",
-  "Thallium",
-  "Lead",
-  "Bismuth",
-  "Polonium",
-  "Astatine",
-  "Radon",
-  "Francium",
-  "Radium",
-  "Actinium",
-  "Thorium",
-  "Protactinium",
-  "Uranium",
-  "Neptunium",
-  "Plutonium",
-  "Americium",
-  "Curium",
-  "Berkelium",
-  "Californium",
-  "Einsteinium",
-  "Fermium",
-  "Mendelevium",
-  "Nobelium",
-  "Lawrencium",
-  "Rutherfordium",
-  "Dubnium",
-  "Seaborgium",
-  "Bohrium",
-  "Hassium",
-  "Meitnerium",
-  "Darmstadtium",
-  "Roentgenium",
-  "Copernicium",
-  "Nihonium",
-  "Flerovium",
-  "Moscovium",
-  "Livermorium",
-  "Tennessine",
-  "Oganesson"
-];
-
-var pairs = [];
-for (i = 0; i < list.length; i++) {
-  pairs[i] = [list[i], i + 1];
-}
-function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+<head>
+  <title>hbresnahan</title>
+  <script>
+    function elements() {
+    var list = [
+      "Hydrogen",
+      "Helium",
+      "Lithium",
+      "Beryllium",
+      "Boron",
+      "Carbon",
+      "Nitrogen",
+      "Oxygen",
+      "Fluorine",
+      "Neon",
+      "Sodium",
+      "Magnesium",
+      "Aluminium",
+      "Silicon",
+      "Phosphorus",
+      "Sulphur",
+      "Chlorine",
+      "Argon",
+      "Potassium",
+      "Calcium",
+      "Scandium",
+      "Titanium",
+      "Vanadium",
+      "Chromium",
+      "Manganese",
+      "Iron",
+      "Cobalt",
+      "Nickel",
+      "Copper",
+      "Zinc",
+      "Gallium",
+      "Germanium",
+      "Arsenic",
+      "Selenium",
+      "Bromine",
+      "Krypton",
+      "Rubidium",
+      "Strontium",
+      "Yttrium",
+      "Zirconium",
+      "Niobium",
+      "Molybdenum",
+      "Technetium",
+      "Ruthenium",
+      "Rhodium",
+      "Palladium",
+      "Silver",
+      "Cadmium",
+      "Indium",
+      "Tin",
+      "Antimony",
+      "Tellurium",
+      "Iodine",
+      "Xenon",
+      "Cesium",
+      "Barium",
+      "Lanthanum",
+      "Cerium",
+      "Praseodymium",
+      "Neodymium",
+      "Promethium",
+      "Samarium",
+      "Europium",
+      "Gadolinium",
+      "Terbium",
+      "Dysprosium",
+      "Holmium",
+      "Erbium",
+      "Thulium",
+      "Ytterbium",
+      "Lutetium",
+      "Hafnium",
+      "Tantalum",
+      "Tungsten",
+      "Rhenium",
+      "Osmium",
+      "Iridium",
+      "Platinum",
+      "Gold",
+      "Mercury",
+      "Thallium",
+      "Lead",
+      "Bismuth",
+      "Polonium",
+      "Astatine",
+      "Radon",
+      "Francium",
+      "Radium",
+      "Actinium",
+      "Thorium",
+      "Protactinium",
+      "Uranium",
+      "Neptunium",
+      "Plutonium",
+      "Americium",
+      "Curium",
+      "Berkelium",
+      "Californium",
+      "Einsteinium",
+      "Fermium",
+      "Mendelevium",
+      "Nobelium",
+      "Lawrencium",
+      "Rutherfordium",
+      "Dubnium",
+      "Seaborgium",
+      "Bohrium",
+      "Hassium",
+      "Meitnerium",
+      "Darmstadtium",
+      "Roentgenium",
+      "Copernicium",
+      "Nihonium",
+      "Flerovium",
+      "Moscovium",
+      "Livermorium",
+      "Tennessine",
+      "Oganesson"
+    ];
+    
+    var pairs = [];
+    for (i = 0; i < list.length; i++) {
+      pairs[i] = [list[i], i + 1];
     }
-}
-if (confirm("Randomize?")) {
-  shuffleArray(pairs);
-}
-var startTime = new Date();
-var elementTimes = [];
-elementTimes[pairs[0][1]] = startTime;
-var lastTime = new Date();
-
-for (i = 0; i < pairs.length; i++) {
-  lastTime = new Date();
-
-  elementTimes[pairs[i][1]] = new Date();
-  if (i > 0) {
-    elementTimes[pairs[i - 1][1]] = new Date() - elementTimes[pairs[i - 1][1]];
-  }
-
-  var done = false;
-  var input = prompt(pairs[i][1]);
-  if ((input != null) && (input != "")) {
-    input = input.toLowerCase();
-  } else {
-    console.log(pairs[i][1]);
-    if (!(confirm(pairs[i][0] + ". Continue?"))) {
-      break;
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
     }
-  }
-  while (input != pairs[i][0].toLowerCase()) {
-    input = prompt(pairs[i][1]);
-    if ((input != null) && (input != "")) {
-      input = input.toLowerCase();
-    } else {
-      console.log(pairs[i][1]);
-      if (!(confirm(pairs[i][0] + ". Continue?"))) {
-        done = true;
-        break;
+    if (confirm("Randomize?")) {
+      shuffleArray(pairs);
+    }
+    var startTime = new Date();
+    var elementTimes = [];
+    elementTimes[pairs[0][1]] = startTime;
+    var lastTime = new Date();
+    
+    for (i = 0; i < pairs.length; i++) {
+      lastTime = new Date();
+    
+      elementTimes[pairs[i][1]] = new Date();
+      if (i > 0) {
+        elementTimes[pairs[i - 1][1]] = new Date() - elementTimes[pairs[i - 1][1]];
+      }
+    
+      var done = false;
+      var input = prompt(pairs[i][1]);
+      if ((input != null) && (input != "")) {
+        input = input.toLowerCase();
+      } else {
+        console.log(pairs[i][1]);
+        if (!(confirm(pairs[i][0] + ". Continue?"))) {
+          break;
+        }
+      }
+      while (input != pairs[i][0].toLowerCase()) {
+        input = prompt(pairs[i][1]);
+        if ((input != null) && (input != "")) {
+          input = input.toLowerCase();
+        } else {
+          console.log(pairs[i][1]);
+          if (!(confirm(pairs[i][0] + ". Continue?"))) {
+            done = true;
+            break;
+          }
+        }
+      }
+      if (done) {break;}
+    }
+    elementTimes[pairs[pairs.length - 1][1]] = new Date() - lastTime;
+    
+    var time = new Date() - startTime;
+    var milliseconds = time % 1000;
+    var seconds = Math.floor(time / 1000) % 60;
+    var minutes = Math.floor(time / 60000);
+    alert("Time taken: " + minutes + " minutes, " + seconds + " seconds, " + milliseconds + " milliseconds.");
+    
+    var longestElement = 0;
+    var longestTime = 0;
+    for (i = 1; i <= list.length; i++) {
+      if (elementTimes[i] > longestTime) {
+        longestTime = elementTimes[i];
+        longestElement = i;
       }
     }
-  }
-  if (done) {break;}
-}
-elementTimes[pairs[pairs.length - 1][1]] = new Date() - lastTime;
+    alert("Longest element was " + longestElement + ", which took " + (longestTime / 1000) + " seconds.");
+    }
+    </script>
+</head>
 
-var time = new Date() - startTime;
-var milliseconds = time % 1000;
-var seconds = Math.floor(time / 1000) % 60;
-var minutes = Math.floor(time / 60000);
-alert("Time taken: " + minutes + " minutes, " + seconds + " seconds, " + milliseconds + " milliseconds.");
-
-var longestElement = 0;
-var longestTime = 0;
-for (i = 1; i <= list.length; i++) {
-  if (elementTimes[i] > longestTime) {
-    longestTime = elementTimes[i];
-    longestElement = i;
-  }
-}
-alert("Longest element was " + longestElement + ", which took " + (longestTime / 1000) + " seconds.");
-}
-</script>
+<body>
+  <div><a href="javascript:elements();">Learn Elements</a></div>
+</body>
